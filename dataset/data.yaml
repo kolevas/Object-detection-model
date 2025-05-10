@@ -1,0 +1,13 @@
+train: /Users/snezhanakoleva/PycharmProject/VNP/dataset/train/images
+val: /Users/snezhanakoleva/PycharmProject/VNP/dataset/valid/images
+
+
+nc: 4
+names: ['blue_ball', 'green_cube', 'red_ball', 'red_cube']
+
+roboflow:
+  workspace: vnp-rgviz
+  project: my-first-project-jbvmy
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/vnp-rgviz/my-first-project-jbvmy/dataset/2
