@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 
-model = YOLO("/Users/snezhanakoleva/PycharmProject/VNP/runs/detect/my_project_v2_tuned/weights/best.pt")
+model = YOLO("/Users/snezhanakoleva/PycharmProject/VNP/runs/detect/model_nano/weights/best.pt")
 
 cap = cv2.VideoCapture(0)
 
@@ -41,12 +41,12 @@ print("Camera released and windows closed.")
 
 #
 # yolo detect train \
-#   model=yolov8s.pt \
+#   model=yolov8n.pt \
 #   data=/Users/snezhanakoleva/PycharmProject/VNP/dataset/data.yaml \
 #   epochs=250 \
 #   imgsz=640 \
 #   batch=16 \
-#   name=my_project_v2_tuned \
+#   name=model_nano\
 #   patience=20 \
 #   optimizer=AdamW \
 #   lr0=0.001 \
@@ -68,8 +68,15 @@ print("Camera released and windows closed.")
 
 
 # yolo detect predict \
-#   model=runs/detect/my_project_small_dataset_tuned/weights/best.pt \
+#   model= /Users/snezhanakoleva/PycharmProject/VNP/runs/detect/model_nano/weights/best.pt\
+#   source=0 \
+#   agnostic_nms=True \ conf = 0.8 \ iou = 0.6
+
+
+# yolo detect predict \
+#   model=/home/finkirobot/skripti/ADR013-V4.1_RaspTank_SmartCarKit_for_RPi-20250219/Code/adeept_rasptank2/best.pt \
 #   source=0 \
 #   agnostic_nms=True \ conf = 0.8 \ iou = 0.8
+
 
 #https://app.roboflow.com/vnp-rgviz/my-first-project-jbvmy/browse?queryText=split%3Avalid&pageSize=50&startingIndex=0&browseQuery=true
